@@ -116,6 +116,7 @@ alias lt='lsd --tree'      # Klasör yapısını ağaç olarak göster
 alias c='clear'                         # Terminali temizle
 alias h='history'                       # Komut geçmişini gör
 alias searchalias='\alias | fzf'
+alias cat='bat'
 setopt HIST_IGNORE_DUPS       # Üst üste gelen aynı komutları kaydetme
 setopt HIST_IGNORE_ALL_DUPS   # Daha önce yazılmış aynı komutu geçmişten sil
 setopt HIST_REDUCE_BLANKS     # Gereksiz boşlukları sil
