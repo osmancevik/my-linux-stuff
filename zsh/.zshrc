@@ -133,3 +133,18 @@ teach_me_alias() {
 
 # Fonksiyonu çalıştır
 teach_me_alias
+
+# Kitty terminal özelliklerini ve renklerini SSH'a taşır
+alias ssh="kitty +kitten ssh"
+
+# VM'e bağlandığında doğrudan tmux oturumuna girer (bağlantı kopsa da nvim açık kalır)
+# 'vm1' kısmını ssh config dosyanızdaki isimle değiştirin
+alias vms='ssh -t vm1 "tmux attach || tmux"'
+alias vms2='ssh -t vm2 "tmux attach || tmux"'
+alias vms3='ssh -t vm3 "tmux attach || tmux"'
+
+# SSH Agent'ı otomatik başlatır (Anahtarlarınızı her seferinde sormaz)
+if [ -z "$SSH_AUTH_SOCK" ]; then
+   eval `ssh-agent -s`
+   ssh-add ~/.ssh/id_rsa 2>/dev/null
+fi

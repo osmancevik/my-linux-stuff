@@ -25,3 +25,18 @@ opt.writebackup = false -- Dosya yazılırken yedekleme yapma
 opt.undofile = true     -- Dosya kapansa bile geri alma (undo) geçmişini korur (JetBrains'deki Local History gibi)
 vim.opt.autowrite = true    -- Bazı komutlar çalıştırıldığında otomatik kaydet
 vim.opt.autowriteall = true -- Pencere odağı kaybolduğunda vb. durumlarda kaydet
+
+-- SSH bağlantısı algılanırsa OSC 52 pano desteğini aç
+if vim.env.SSH_TTY then
+  vim.g.clipboard = {
+    name = 'OSC 52',
+    copy = {
+      ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+      ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+    },
+    paste = {
+      ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
+      ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+    },
+  }
+end
