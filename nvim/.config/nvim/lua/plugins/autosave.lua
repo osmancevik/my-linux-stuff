@@ -5,15 +5,15 @@ return {
       enabled = true,
       trigger_events = { "InsertLeave", "TextChanged" },
       condition = function(buf)
-        local fn = vim.fn
         local api = vim.api
+        local fn = vim.fn
 
-        -- 1. Tamponun hala geçerli olup olmadığını kontrol et (Hatanın çözümü)
+        -- Tampon geçerlilik kontrolü (Hata almamak için)
         if not buf or not api.nvim_buf_is_valid(buf) then
           return false
         end
 
-        -- 2. Sadece normal dosyalarda çalış (Mevcut kontrolün)
+        -- Sadece normal dosyalarda çalış
         local buftype = fn.getbufvar(buf, "&buftype")
         if buftype ~= "" then
           return false
@@ -23,13 +23,8 @@ return {
       end,
       write_all_buffers = false,
       debounce_delay = 135,
-      callbacks = {
-        after_saving = function()
-          if Snacks then
-            Snacks.notify.info("Değişiklikler kaydedildi", { title = "AutoSave", timeout = 1000 })
-          end
-        end,
-      },
+      -- Bildirimleri kaldırmak için callbacks içini boş bırakıyoruz
+      callbacks = {},
     },
   },
 }
