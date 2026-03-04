@@ -1,16 +1,19 @@
 -- Autocmds are automatically loaded on the VeryLazy event
--- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
---
--- Add any additional autocmds here
--- with `vim.api.nvim_create_autocmd`
---
--- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
--- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+-- Default autocmds: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 
--- Dosya her kaydedildiğinde kısa bir bildirim göster
-vim.api.nvim_create_autocmd("BufWritePost", {
-  group = vim.api.nvim_create_augroup("gui_save_notification", { clear = true }),
+local function safe_save()
+  -- Sadece dosya değiştirilmişse, bir adı varsa ve normal bir dosyaysa kaydet
+  if vim.bo.modified and vim.bo.buftype == "" and vim.api.nvim_buf_get_name(0) ~= "" then
+    -- silent! komutu sayesinde kayıt işlemi hata mesajı basmadan gerçekleşir
+    vim.cmd("silent! update")
+  end
+end
+
+-- JetBrains mantığı: Odak kaybolduğunda, mod değiştiğinde veya metin değiştiğinde kaydet
+vim.api.nvim_create_autocmd({ "FocusLost", "BufLeave", "InsertLeave", "TextChanged" }, {
+  group = vim.api.nvim_create_augroup("JetBrainsSafeSave", { clear = true }),
   callback = function()
-    vim.notify("Dosya kaydedildi", vim.log.levels.INFO, { title = "AutoSave", timeout = 500 })
+    -- Hata almamak için işlemi zamanlanmış bir görev olarak çalıştır
+    vim.schedule(safe_save)
   end,
 })
