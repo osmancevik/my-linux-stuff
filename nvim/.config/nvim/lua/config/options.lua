@@ -17,3 +17,11 @@ opt.smartindent = true
 -- 4. Arama Ayarları
 opt.ignorecase = true -- Aramada büyük/küçük harf duyarlılığını kapat
 opt.smartcase = true  -- Eğer büyük harf kullanırsan duyarlı hale geç
+
+-- Swap, backup ve undo dosyalarını JetBrains mantığında yönetmek
+opt.swapfile = false    -- .swp dosyası oluşturma
+opt.backup = false      -- Yedek dosya oluşturma
+opt.writebackup = false -- Dosya yazılırken yedekleme yapma
+opt.undofile = true     -- Dosya kapansa bile geri alma (undo) geçmişini korur (JetBrains'deki Local History gibi)
+vim.opt.autowrite = true    -- Bazı komutlar çalıştırıldığında otomatik kaydet
+vim.opt.autowriteall = true -- Pencere odağı kaybolduğunda vb. durumlarda kaydet
