@@ -121,3 +121,14 @@ setopt HIST_IGNORE_ALL_DUPS   # Daha önce yazılmış aynı komutu geçmişten 
 setopt HIST_REDUCE_BLANKS     # Gereksiz boşlukları sil
 source /usr/share/fzf/key-bindings.zsh
 
+# Terminal her açıldığında rastgele bir alias önerir
+teach_me_alias() {
+    local picked_alias
+    # Alias listesinden rastgele bir satır seçer
+    picked_alias=$( \alias | shuf -n 1 )
+    
+    echo -e "\e[1;34m💡 Daily Tip:\e[0m -> \e[1;32m$picked_alias\e[0m"
+}
+
+# Fonksiyonu çalıştır
+teach_me_alias
