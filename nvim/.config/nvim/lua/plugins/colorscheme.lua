@@ -1,19 +1,19 @@
 return {
-  -- VS Code Teması
+  -- VS Code Theme
   {
     "Mofiqul/vscode.nvim",
-    priority = 1000, -- Temanın her şeyden önce yüklenmesi için
+    priority = 1000, -- Ensure the theme loads before other plugins
     opts = {
-      -- 'dark' (varsayılan) veya 'light' seçebilirsin
+      -- You can choose 'dark' (default) or 'light'
       style = "dark",
-      -- İtalyik yazı tipi tercihlerini buradan ayarlayabilirsin
+      -- Configure italic font preferences for comments
       italic_comments = true,
-      -- Arka plan şeffaf olsun istersen true yapabilirsin
+      -- Set to true if you want a transparent background
       transparent = false,
     },
   },
 
-  -- LazyVim'e bu temayı kullanmasını söylüyoruz
+  -- Configure LazyVim to use this colorscheme
   {
     "LazyVim/LazyVim",
     opts = {

@@ -1,5 +1,5 @@
 return {
-  -- 1. Snacks.nvim (Görsel altyapı)
+  -- 1. Snacks.nvim
   {
     "folke/snacks.nvim",
     opts = {
@@ -11,7 +11,7 @@ return {
     end,
   },
 
-  -- 2. Treesitter (Dil desteği ve Performans ayarı)
+  -- 2. Treesitter
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
@@ -20,7 +20,7 @@ return {
       end
       vim.list_extend(opts.ensure_installed, { "latex", "markdown", "markdown_inline", "css" })
 
-      -- Büyük dosyalarda performansı korumak için highlight kısıtlaması
+      -- Highlight restriction to preserve performance in large files.
       opts.highlight = {
         enable = true,
         disable = function(lang, buf)
@@ -35,14 +35,12 @@ return {
     end,
   },
 
-  -- 3. Neo-tree (Dosya gezgini senkronizasyonu)
+  -- 3. Neo-tree
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       filesystem = {
-        -- JetBrains benzeri: Açık olan dosyayı ağaç yapısında otomatik bulur
         follow_current_file = { enabled = true },
-        -- Dosya sistemindeki değişiklikleri (yeni dosya vb.) anlık izler
         use_libuv_file_watcher = true,
       },
     },

@@ -1,10 +1,10 @@
 return {
-  -- 1. LSP Yapılandırması (Python, Rust, vb.)
+  -- 1. LSP Configuration
   {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        -- Python Ayarları
+        -- Python settings
         pyright = {
           settings = {
             python = {
@@ -16,7 +16,7 @@ return {
             },
           },
         },
-        -- Rust Ayarları (Sistemindeki rust-analyzer ile konuşması için)
+        -- Rust settings
         rust_analyzer = {
           settings = {
             ["rust-analyzer"] = {
@@ -25,20 +25,19 @@ return {
             },
           },
         },
-        -- SQL Ayarları
+        -- SQL settings
         sqls = {},
       },
     },
   },
 
-  -- 2. SQL ve Diğer Formatlayıcılar (Conform.nvim)
-  -- "No formatter available" hatasını bu blok çözecektir.
+  -- 2. SQL & other formatters
   {
     "stevearc/conform.nvim",
     opts = {
       formatters_by_ft = {
         sql = { "sql_formatter" },
-        python = { "black" }, -- İstersen ruff olarak da değiştirebilirsin
+        python = { "black" },
       },
     },
   },
