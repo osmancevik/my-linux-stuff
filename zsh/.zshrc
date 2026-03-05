@@ -92,6 +92,9 @@ alias vmsk3='kitty +kitten ssh -t vm3 "tmux attach || tmux"'
 alias vms='ssh -t vm1 "tmux attach || tmux"'
 alias vms2='ssh -t vm2 "tmux attach || tmux"'
 alias vms3='ssh -t vm3 "tmux attach || tmux"'
+
+alias todo='taskwarrior-tui'
+alias refresh='source ~/.zshrc'
 # ===END===
 
 # ===FUNCTIONS===
