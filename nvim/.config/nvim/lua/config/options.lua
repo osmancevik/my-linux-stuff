@@ -40,16 +40,3 @@ if vim.env.SSH_TTY then
     },
   }
 end
-
-function docker_fix()
-  local filename = vim.fn.expand("%:t")
-
-  if filename == "docker-compose.yaml" then
-    vim.bo.filetype = "yaml.docker-compose"
-    print("matched!")
-  else
-    print(filename)
-  end
-end
-
-vim.cmd([[au BufRead * lua docker_fix()]])
