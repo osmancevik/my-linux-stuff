@@ -111,3 +111,4 @@ teach_me_alias() {
 # Run the functions
 teach_me_alias
 # ===END===
+export PATH="$HOME/.cargo/bin:$PATH"

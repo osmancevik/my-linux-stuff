@@ -15,11 +15,6 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
-      if type(opts.ensure_installed) ~= "table" then
-        opts.ensure_installed = { "lua", "vim", "vimdoc", "query" }
-      end
-      vim.list_extend(opts.ensure_installed, { "latex", "markdown", "markdown_inline", "css" })
-
       -- Highlight restriction to preserve performance in large files.
       opts.highlight = {
         enable = true,
