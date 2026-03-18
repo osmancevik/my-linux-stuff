@@ -1,5 +1,5 @@
 return {
-  -- 1. LSP Configuration
+  -- 1. LSP Configuration XX
   {
     "neovim/nvim-lspconfig",
     opts = {
