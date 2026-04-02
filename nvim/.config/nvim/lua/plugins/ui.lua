@@ -15,7 +15,6 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
-      -- Highlight restriction to preserve performance in large files.
       opts.highlight = {
         enable = true,
         disable = function(lang, buf)
