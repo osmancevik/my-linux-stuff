@@ -86,29 +86,11 @@ alias h='history'
 alias searchalias='\alias | fzf'      
 alias cat='bat'                       
 
-alias vmsk='ssh -t vm1 "export TERM=xterm-kitty; tmux -2 attach || tmux -2"'
-alias vmsk2='kitty +kitten ssh -t vm2 "tmux attach || tmux"'
-alias vmsk3='kitty +kitten ssh -t vm3 "tmux attach || tmux"'
-alias vms='ssh -t vm1 "tmux attach || tmux"'
-alias vms2='ssh -t vm2 "tmux attach || tmux"'
-alias vms3='ssh -t vm3 "tmux attach || tmux"'
-
-alias todo='taskwarrior-tui'
 alias refresh='source ~/.zshrc'
+alias yelpence_durdur='docker compose -f $(dirname $(pwd))/docker/docker-compose.yml down && docker compose -f $(dirname $(pwd))/docker/docker-compose-amd.yml down'
+alias yelpence_gir='docker exec -it yelpence_swarm_container /usr/local/bin/entrypoint.sh /bin/bash'
 # ===END===
 
-# ===FUNCTIONS===
-# Function to suggest a random alias every time the terminal opens
-teach_me_alias() {
-    local picked_alias
-    picked_alias=$( \alias | shuf -n 1 )
-    
-    if [[ -n "$picked_alias" ]]; then
-        echo -e "\e[1;34m💡 Alias Tip\e[0m -> \e[1;32m$picked_alias\e[0m"
-    fi
-}
-
 # Run the functions
-teach_me_alias
 # ===END===
 export PATH="$HOME/.cargo/bin:$PATH"
