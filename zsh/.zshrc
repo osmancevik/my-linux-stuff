@@ -87,7 +87,7 @@ alias searchalias='\alias | fzf'
 alias cat='bat'                       
 
 alias refresh='source ~/.zshrc'
-alias yelpence_durdur='docker compose -f $(dirname $(pwd))/docker/docker-compose.yml down && docker compose -f $(dirname $(pwd))/docker/docker-compose-amd.yml down'
+alias yelpence_dur='docker compose -f $(dirname $(pwd))/docker/docker-compose.yml down && docker compose -f $(dirname $(pwd))/docker/docker-compose-amd.yml down'
 alias yelpence_gir='docker exec -it yelpence_swarm_container /usr/local/bin/entrypoint.sh /bin/bash'
 # ===END===
 
