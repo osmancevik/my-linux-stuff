@@ -1,4 +1,4 @@
--- completion.lua: configuration for blink.cmp auto completion
+-- completion.lua: configuration for saghen/blink.cmp auto completion
 
 return {
   {

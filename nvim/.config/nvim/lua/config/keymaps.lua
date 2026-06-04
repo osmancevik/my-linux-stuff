@@ -1,7 +1,6 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
---
 
 vim.keymap.set("n", "<F5>", function()
   local ft = vim.bo.filetype
@@ -23,7 +22,6 @@ vim.keymap.set("n", "<F5>", function()
       win = {
         position = "bottom",
         height = 0.4,
-        -- Pencereyi daha belirgin yapmak için border ekleyebilirsin
         border = "rounded",
       },
     })
