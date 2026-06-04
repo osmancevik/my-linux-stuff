@@ -1,3 +1,5 @@
+-- options.lua: This file defines global editor behavior and UI settings, serving as the place to add future system-level tweaks and Neovim feature toggles.
+
 local opt = vim.opt
 
 -- Visual and general settings

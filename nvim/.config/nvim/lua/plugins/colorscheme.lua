@@ -1,3 +1,5 @@
+-- colorscheme.lua: theme configurations
+
 return {
   -- VS Code Theme
   {
