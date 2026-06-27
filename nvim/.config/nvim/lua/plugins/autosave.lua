@@ -34,7 +34,4 @@ return {
     debounce_delay = 1000,
     clear_command_line_history = true,
   },
-  keys = {
-    { "<leader>as", "<cmd>ASToggle<cr>", desc = "Otomatik Kaydetmeyi Aç/Kapat" },
-  },
 }

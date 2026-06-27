@@ -12,11 +12,11 @@ ZSH_THEME="robbyrussell"
 # ===END===
 
 # ===PREFENCES===
-# Enable hyphen-insensitive completion (treat - and _ as equivalent)
+# Enable hyphen-insensitive completion
 HYPHEN_INSENSITIVE="true"
 
-# update reminder (not auto-update just reminder)
-zstyle ':omz:update' mode reminder  
+# update reminder
+zstyle ':omz:update' mode reminder
 
 # Enable typo correction for commands
 ENABLE_CORRECTION="true"
@@ -54,7 +54,7 @@ setopt HIST_EXPIRE_DUPS_FIRST
 # Add commands to history as soon as they are executed, rather than waiting for shell exit
 setopt INC_APPEND_HISTORY
 
-# Enable fzf key bindings (e.g., CTRL-R for fuzzy history search)
+# Enable fzf key bindings
 source /usr/share/fzf/key-bindings.zsh
 # ===END===
 
@@ -91,6 +91,4 @@ alias yelpence_dur='docker compose -f $(dirname $(pwd))/docker/docker-compose.ym
 alias yelpence_gir='docker exec -it yelpence_swarm_container /usr/local/bin/entrypoint.sh /bin/bash'
 # ===END===
 
-# Run the functions
-# ===END===
 export PATH="$HOME/.cargo/bin:$PATH"

@@ -4,10 +4,9 @@ local opt = vim.opt
 
 -- Visual and general settings
 opt.number = true
-opt.relativenumber = true
+opt.relativenumber = false
 opt.cursorline = true
 opt.termguicolors = true
-opt.scrolloff = 10
 opt.signcolumn = "yes"
 
 -- Indentation settings
