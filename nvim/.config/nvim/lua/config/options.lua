@@ -8,6 +8,7 @@ opt.relativenumber = false
 opt.cursorline = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
+vim.opt.mouse = ""
 
 -- Indentation settings
 opt.tabstop = 2
