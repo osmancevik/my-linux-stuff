@@ -85,6 +85,7 @@ alias c='clear'
 alias h='history'                     
 alias searchalias='\alias | fzf'      
 alias cat='bat'                       
+alias n="nvim"
 
 alias refresh='source ~/.zshrc'
 alias yelpence_dur='docker compose -f $(dirname $(pwd))/docker/docker-compose.yml down && docker compose -f $(dirname $(pwd))/docker/docker-compose-amd.yml down'

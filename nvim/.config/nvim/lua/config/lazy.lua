@@ -1,4 +1,4 @@
--- lazy.lua: This acts as the primary engine for plugin management, providing the framework to install and optimize any new plugins you add later.  
+-- lazy.lua: This acts as the primary engine for plugin management, providing the framework to install and optimize any new plugins you add later.
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
