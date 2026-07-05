@@ -83,8 +83,6 @@ alias lt='lsd --tree'
 
 alias c='clear'
 alias h='history'
-alias searchalias='\alias | fzf'
-alias cat='bat'
 alias n="nvim"
 
 alias refresh='source ~/.zshrc'
