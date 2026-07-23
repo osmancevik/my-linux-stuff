@@ -84,6 +84,8 @@ alias lt='lsd --tree'
 alias c='clear'
 alias h='history'
 alias n="nvim"
+alias q="exit"
+
 
 alias refresh='source ~/.zshrc'
 alias yelpence_dur='docker compose -f $(dirname $(pwd))/docker/docker-compose.yml down && docker compose -f $(dirname $(pwd))/docker/docker-compose-amd.yml down'

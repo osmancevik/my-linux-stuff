@@ -4,7 +4,7 @@ local opt = vim.opt
 
 -- Visual and general settings
 opt.number = true
-opt.relativenumber = false
+opt.relativenumber = true
 opt.cursorline = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
