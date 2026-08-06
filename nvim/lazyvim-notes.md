@@ -1,0 +1,50 @@
+## Gezinme Davranışları
+
+### flash.nvim ve Find Mode
+
+* Sadece ekranda görebildiğin bir noktaya gitmeni sağlar.
+* Normal modda s tuşuna basarak aktif olur.
+* Girdi olarak bir veya çok karakter verilebilir. Girdinin yanında bir gezinme harfi belirir.
+* Seçtiğin gezinme harfi seni ilk girdi karakterinin olduğu yere ışınlar.
+* f ve t tuşları find mode'u tetikler.
+* Find mode'a girdikten sonra aranan eleman tuşlanır ve bu sefer gidilmesi istenilen elemanın sıra numarasına göre ulaşılır.
+* f gitmek istenilen elemanın sonrasına, t ise öncesine gider.
+* f ve t imlecin aşağısı için çalışır. F ve T imlecin yukarısı için çalışır.
+
+### Ekran Kaydırma
+
+* CTRL-u -> Yarım ekran yukarı kaydırır.
+* CTRL-b -> Yarım ekran aşağı kaydırır.
+* CTRL-e -> Bir satır aşağı kaydırır.
+* CTRL-y -> Bir satır yukarı kaydırır.
+* zz -> İmleci ortalayacak şekilde ekranı kaydırır. 
+* zt -> Üstte 4 satır kalacak şekilde kaydırır.
+* zb -> Altta 4 satır kalacak şekilde kaydırır.
+
+### Buffer İçinde Gezinme
+
+* w -> Sonraki sözcüğün başı.
+* e -> Sonraki sözcüğün sonu.
+* b -> Önceki sözcüğün başı.
+* ge -> Önceki sözcüğün sonu.
+* gh -> Mevcut satırın başına.
+* gl -> Mevcut satırın sonuna.
+* gg -> Dosyanın başına.
+* G -> Dosyanın sonuna.
+* 5G -> 5. satıra git
+* CTRL-o -> Son atladığım yere geri dön.
+* CTRL-i -> Geçmişte ileriye doğru atla.
+
+### Explorer ve File Find
+
+* Space Space -> Find arayüzünü root alanında açar.
+* Space f F -> Find arayüzünü cwd alanında açar.
+* Space e -> Explorer penceresini açar.
+* CTRL h -> Explorer ile Buffer arasında geçiş yapar.
+* flash eklentisi Buffer ve Explorer arasında kullanılablir.
+* d -> Seçili dosyayı siler.
+* a -> Bir dizin veya dosya ekler.
+* r -> Dizin ya da dosyayı yeniden adlandırır.
+* y ve p -> Dosya kopyalama ve yapıştırma için kullanılır.
+* m -> Bir dosya yeni konuma veya isme taşınır.
+* / -> Fuzzy Search başlatır.

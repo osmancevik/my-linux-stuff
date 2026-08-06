@@ -86,10 +86,12 @@ alias h='history'
 alias n="nvim"
 alias q="exit"
 
-
 alias refresh='source ~/.zshrc'
 alias yelpence_dur='docker compose -f $(dirname $(pwd))/docker/docker-compose.yml down && docker compose -f $(dirname $(pwd))/docker/docker-compose-amd.yml down'
 alias yelpence_gir='docker exec -it yelpence_swarm_container /usr/local/bin/entrypoint.sh /bin/bash'
 # ===END===
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# Added by Antigravity CLI installer
+export PATH="/home/osmancevik/.local/bin:$PATH"
