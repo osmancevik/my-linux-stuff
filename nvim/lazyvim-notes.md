@@ -48,3 +48,45 @@
 * y ve p -> Dosya kopyalama ve yapıştırma için kullanılır.
 * m -> Bir dosya yeni konuma veya isme taşınır.
 * / -> Fuzzy Search başlatır.
+
+### Temel Metin Düzenleme
+* dh -> İmlecin solundan bir harf siler.
+* dw -> İmlecin sağından bir kelime siler.
+* d0 -> İmleçten satır başına kadar olan kısmı siler.
+* d2fe -> İmlecin bulunduğu konum ile sonraki ikinci e arasındaki tüm metni siler.
+* D -> İmlecin bulunduğu noktadan satırın sonuna kadar siler.
+* dd -> Bütün satırı tek seferde siler.
+* Yukarıdaki tüm d kombinasyonları c ile yapılırsa önce siler sonra ekleme moduna geçer.
+* x -> İmlecin altındaki karakteri siler.
+* X -> İmlecin bir solundaki karakteri siler.
+* r -> İmleç altındaki karakteri değiştirir.
+* J -> Satır sonu karakterini siler.
+* gJ -> Boşluğu silmeden satır birleştirme yapar.
+* . -> En son gerçekleştirilen eylemi tekrar eder.
+* u -> Değişiklikleri geri alır.
+* CTRL-r -> İleri alma yapar.
+
+### Operator-Pending
+* ( ve ) -> Cümle başına ve sonraki cümleye atlar.
+* { ve } -> Paragraf başına ve sonraki paragrafa atlar.
+* [ ve ] -> Bir önceki ve sonraki bir şeye atlamanızı sağlar.
+
+### Görsel Mod ve Kopyala-Yapıştır
+* p -> Panodaki metni imlecin sonrasına yerleştirir.
+* P -> Panodaki metni imlecin öncesine yerleştirir.
+* y -> Kopyalama menüsünü açar.
+* yy -> Bütün satırı kopyalar.
+* Y -> İmleçten sonrasını kopyalar.
+* y0 -> İmleçten öncesini kopyalar.
+* v -> Görsel moda girer.
+* gv -> Son görsel mod seçimini tekrar uygular.
+* o -> Görsel modda seçimin iki ucu arasında hareket etmeyi sağlar.
+* V -> Hareketlerde tüm satırı alır.
+* CTRL-v -> Blok görsel modunu aktif eder.
+
+### Registers
+* " -> Register ekranını açar.
+* "ap -> Seçilen register'ı yapıştırır.
+* "ay -> Seçilen metni a register'ına kopyalar.
+* CTRL-r -> Insert modunda yazmaç ekranını açar.
+
