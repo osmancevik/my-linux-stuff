@@ -106,3 +106,5 @@
 * Space tab tab -> Yeni sekme oluşturur.
 * gt -> Sekmeler arasında geçiş yapar.
 * space tab d -> Odaklı sekmeyi kapatır.
+* za -> Açık kodu katlar ve katlı olan kodu açar.
+* zR -> Katlı olan tüm kodları geri açar.
