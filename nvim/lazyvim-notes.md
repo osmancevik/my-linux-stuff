@@ -89,4 +89,20 @@
 * "ap -> Seçilen register'ı yapıştırır.
 * "ay -> Seçilen metni a register'ına kopyalar.
 * CTRL-r -> Insert modunda yazmaç ekranını açar.
+* Space p -> yanky eklentisinden gelen register ekranını açar. Enter tuşu ile yapıştırılabilir.
 
+### Ekran Yönetimi
+* Shift H ve L -> Açık bufferlar arasında gezinti sağlar.
+* Space , -> Arabellek listesini açar. 
+* Space bd -> Arabelleği kapatır.
+* Space bD -> Arabelleği ve pencereyi kapatır.
+* CTRL-x -> Arabellek listesinde seçili olanı kapatır.
+* Space . -> Scratch arabellek açar. 
+* Space S -> Scratch arabellek seçiciyi açar.
+* Space wv -> Yeni pencere oluşturur.
+* Space wd -> Odaklı pencereyi siler.
+* Space ws -> Yeni yatay pencere oluşturur.
+* (Explorer) CTRL-v -> Dosyayı dikey pencerede açar.
+* Space tab tab -> Yeni sekme oluşturur.
+* gt -> Sekmeler arasında geçiş yapar.
+* space tab d -> Odaklı sekmeyi kapatır.
