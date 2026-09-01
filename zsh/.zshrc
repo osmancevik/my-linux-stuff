@@ -87,8 +87,10 @@ alias n="nvim"
 alias q="exit"
 
 alias refresh='source ~/.zshrc'
-alias yelpence_dur='docker compose -f $(dirname $(pwd))/docker/docker-compose.yml down && docker compose -f $(dirname $(pwd))/docker/docker-compose-amd.yml down'
-alias yelpence_gir='docker exec -it yelpence_swarm_container /usr/local/bin/entrypoint.sh /bin/bash'
+
+YKI_DEPO="$HOME/yelpence-2026-saha"
+alias yki='docker start yki >/dev/null 2>&1; docker exec -w "$YKI_DEPO" -e HOME="$HOME" yki bash -lc "bash src/gcs/yki_baslat.sh"'
+alias ykidur='docker exec -w "$YKI_DEPO" -e HOME="$HOME" yki bash -lc "bash src/gcs/yki_durdur.sh"'
 # ===END===
 
 export PATH="$HOME/.cargo/bin:$PATH"
