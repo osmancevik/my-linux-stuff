@@ -87,13 +87,4 @@ alias n="nvim"
 alias q="exit"
 
 alias refresh='source ~/.zshrc'
-
-YKI_DEPO="$HOME/yelpence-2026-saha"
-alias yki='docker start yki >/dev/null 2>&1; docker exec -w "$YKI_DEPO" -e HOME="$HOME" yki bash -lc "bash src/gcs/yki_baslat.sh"'
-alias ykidur='docker exec -w "$YKI_DEPO" -e HOME="$HOME" yki bash -lc "bash src/gcs/yki_durdur.sh"'
 # ===END===
-
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# Added by Antigravity CLI installer
-export PATH="/home/osmancevik/.local/bin:$PATH"
