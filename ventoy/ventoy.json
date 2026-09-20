@@ -1,0 +1,33 @@
+{
+    "control": [
+        { "VTOY_WIN11_BYPASS_CHECK": "1" },
+        { "VTOY_WIN11_BYPASS_NRO": "1" }
+    ],
+    "theme": {
+        "file": "/ventoy/theme/OldBIOS/theme.txt"
+    },
+    "menu_alias": [
+        {
+            "image": "/archlinux.iso",
+            "alias": "Arch Linux"
+        },
+        {
+            "image": "/Win11_25H2_EnglishInternational_x64_v2.iso",
+            "alias": "Windows 11"
+        },
+        {
+            "image": "/HBCD_PE_x64.iso",
+            "alias": "Hiren's BootCD PE"
+        },
+        {
+            "image": "/gparted.iso",
+            "alias": "GParted Live"
+        }
+    ],
+    "persistence": [
+        {
+            "image": "/archlinux.iso",
+            "backend": "/arch_persistence.dat"
+        }
+    ]
+}
